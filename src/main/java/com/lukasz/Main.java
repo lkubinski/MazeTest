@@ -1,4 +1,4 @@
-package com.lukasz.maze;
+package com.lukasz;
 
 /**
  * Created by LKubinski on 30/03/2017.
