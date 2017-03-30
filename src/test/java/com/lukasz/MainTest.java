@@ -1,5 +1,7 @@
 package com.lukasz;
 
+import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /**
@@ -7,4 +9,9 @@ import static org.junit.Assert.*;
  */
 public class MainTest {
 
+    @Test
+    public void checkUserStoryOnetest(){
+        String[] args = {"-us", "1"};
+
+    }
 }

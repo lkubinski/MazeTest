@@ -5,6 +5,6 @@ package com.lukasz.userstory;
  */
 public interface UserStoryAction {
 
-    void doAction(String[] args);
+    void doAction();
 
 }
