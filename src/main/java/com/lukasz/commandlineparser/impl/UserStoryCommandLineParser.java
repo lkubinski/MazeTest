@@ -8,12 +8,14 @@ import com.lukasz.userstory.impl.UserStoryThree;
 import com.lukasz.userstory.impl.UserStoryTwo;
 import org.apache.commons.cli.*;
 import org.apache.commons.cli.Option.Builder;
+import org.apache.log4j.Logger;
 
 /**
  * Created by LKubinski on 30/03/2017.
  */
 public class UserStoryCommandLineParser implements CommandParser, CommandLineOptions {
 
+    final Logger logger = Logger.getLogger(UserStoryCommandLineParser.class);
 
     @Override
     public UserStoryAction parse(String[] args) {
@@ -40,7 +42,7 @@ public class UserStoryCommandLineParser implements CommandParser, CommandLineOpt
             }
         }
         catch(ParseException exp) {
-            System.err.println( "Parsing failed.  Reason: " + exp.getMessage() );
+            logger.error( "Parsing failed.  Reason: " + exp.getMessage());
             //throw new InvalidArgumentException(args);
         }
         return userStoryAction;
